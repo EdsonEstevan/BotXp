@@ -1,0 +1,60 @@
+[
+  {
+    "userId": "1462799244422418516",
+    "timestamp": 1769198029230,
+    "pulls": 10,
+    "results": [
+      {
+        "name": "Poção de Força",
+        "rarity": "common"
+      },
+      {
+        "name": "Baú do Pirata",
+        "rarity": "rare"
+      },
+      {
+        "name": "Tesouro Encontrado",
+        "rarity": "rare"
+      },
+      {
+        "name": "Mapa do Tesouro",
+        "rarity": "common"
+      },
+      {
+        "name": "Riqueza Ancestral",
+        "rarity": "epic"
+      },
+      {
+        "name": "Arqueiro Elite",
+        "rarity": "rare"
+      },
+      {
+        "name": "Poção de Força",
+        "rarity": "common"
+      },
+      {
+        "name": "Scroll Antigo",
+        "rarity": "common"
+      },
+      {
+        "name": "Poção de Vida",
+        "rarity": "common"
+      },
+      {
+        "name": "Poção de Força",
+        "rarity": "common"
+      }
+    ]
+  },
+  {
+    "userId": "1377390755093413958",
+    "timestamp": 1769194876181,
+    "pulls": 1,
+    "results": [
+      {
+        "name": "Poção de Vida",
+        "rarity": "common"
+      }
+    ]
+  }
+]

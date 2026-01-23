@@ -1,0 +1,45 @@
+{
+  "1462799244422418516": {
+    "townHall": 1,
+    "buildings": [
+      {
+        "type": "miner",
+        "builtAt": 1769191740269,
+        "lastCollected": 1769195340269
+      },
+      {
+        "type": "extractor",
+        "builtAt": 1769194416091,
+        "lastCollected": 1769194416091
+      }
+    ],
+    "created": 1769191740256
+  },
+  "1377390755093413958": {
+    "townHall": 1,
+    "buildings": [
+      {
+        "type": "miner",
+        "builtAt": 1769194442015,
+        "lastCollected": 1769194442015
+      }
+    ],
+    "created": 1769192953911
+  },
+  "1377390240058052620": {
+    "townHall": 1,
+    "buildings": [],
+    "created": 1769193287733
+  },
+  "1035219548758089789": {
+    "townHall": 1,
+    "buildings": [
+      {
+        "type": "miner",
+        "builtAt": 1769199897879,
+        "lastCollected": 1769199897879
+      }
+    ],
+    "created": 1769198448854
+  }
+}

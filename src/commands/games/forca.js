@@ -32,7 +32,8 @@ module.exports = {
             return word.split('').map(letter => guessed.has(letter) ? letter : '_').join(' ');
         };
         
-        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+        // Usamos 25 letras para caber no limite de 5 linhas (5 botões por linha)
+        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXZ'.split('');
         const buttons = alphabet.map(letter =>
             new ButtonBuilder()
                 .setCustomId(`forca_${letter}_${userId}_${word}_${reward}_${wrongGuesses}`)

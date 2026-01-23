@@ -1,5 +1,113 @@
 [
   {
+    "timestamp": 1769199559470,
+    "attacker": "464965118174953482",
+    "defender": "1035219548758089789",
+    "won": true,
+    "stars": 3,
+    "stolen": 84,
+    "rounds": 0
+  },
+  {
+    "timestamp": 1769196981990,
+    "attacker": "1462799244422418516",
+    "defender": "1234866994826711050",
+    "won": true,
+    "stars": 3,
+    "stolen": 150,
+    "rounds": 0
+  },
+  {
+    "timestamp": 1769196639082,
+    "attacker": "1377390755093413958",
+    "defender": "1462799244422418516",
+    "won": false,
+    "stars": 0,
+    "stolen": 0,
+    "rounds": 1
+  },
+  {
+    "timestamp": 1769196160338,
+    "attacker": "464965118174953482",
+    "defender": "1019717144755314698",
+    "won": true,
+    "stars": 3,
+    "stolen": 25,
+    "rounds": 0
+  },
+  {
+    "timestamp": 1769194765515,
+    "attacker": "1377390755093413958",
+    "defender": "1377390240058052620",
+    "won": true,
+    "stars": 2,
+    "stolen": 352,
+    "rounds": 1
+  },
+  {
+    "timestamp": 1769193909891,
+    "attacker": "1377390240058052620",
+    "defender": "1234866994826711050",
+    "won": true,
+    "stars": 3,
+    "stolen": 20,
+    "rounds": 0
+  },
+  {
+    "timestamp": 1769193733471,
+    "attacker": "1462799244422418516",
+    "defender": "1377390755093413958",
+    "won": false,
+    "stars": 0,
+    "stolen": 0,
+    "rounds": 4
+  },
+  {
+    "timestamp": 1769192941356,
+    "attacker": "1377390755093413958",
+    "defender": "1377390240058052620",
+    "won": true,
+    "stars": 1,
+    "stolen": 6,
+    "rounds": 3
+  },
+  {
+    "timestamp": 1769192084113,
+    "attacker": "1377390240058052620",
+    "defender": "1234866994826711050",
+    "won": true,
+    "stars": 3,
+    "stolen": 27,
+    "rounds": 0
+  },
+  {
+    "timestamp": 1769190371439,
+    "attacker": "1377390755093413958",
+    "defender": "1234866994826711050",
+    "won": true,
+    "stars": 3,
+    "stolen": 0,
+    "rounds": 0
+  },
+  {
+    "timestamp": 1769188182649,
+    "attacker": "1377390755093413958",
+    "defender": "1462799244422418516",
+    "won": false,
+    "stars": 0,
+    "stolen": 0,
+    "rounds": 3
+  },
+  {
+    "timestamp": 1769187705067,
+    "attacker": "1462799244422418516",
+    "defender": "1377390755093413958",
+    "won": false,
+    "stars": 0,
+    "stolen": 0,
+    "rounds": 4
+  },
+  {
     "timestamp": 1769186201826,
     "attacker": "1377390240058052620",
     "defender": "1377390755093413958",

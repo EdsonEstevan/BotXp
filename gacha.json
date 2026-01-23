@@ -1,0 +1,66 @@
+{
+  "1377390755093413958": [],
+  "1462799244422418516": [
+    {
+      "name": "Riqueza Ancestral",
+      "type": "coins",
+      "value": 1000,
+      "emoji": "👑",
+      "description": "+1000 moedas",
+      "rarity": "epic",
+      "timestamp": 1769198029226,
+      "id": "1462799244422418516_1769198029226_4"
+    },
+    {
+      "name": "Arqueiro Elite",
+      "type": "unit",
+      "unit": "arqueiro",
+      "quantity": 2,
+      "emoji": "🏹✨",
+      "description": "Arqueiro x2 com +esquiva",
+      "rarity": "rare",
+      "timestamp": 1769198029226,
+      "id": "1462799244422418516_1769198029226_5"
+    },
+    {
+      "name": "Poção de Força",
+      "type": "potion",
+      "value": 30,
+      "emoji": "💪",
+      "description": "+30% de dano no próximo ataque",
+      "rarity": "common",
+      "timestamp": 1769198029226,
+      "id": "1462799244422418516_1769198029226_6"
+    },
+    {
+      "name": "Scroll Antigo",
+      "type": "scroll",
+      "value": 100,
+      "emoji": "📜",
+      "description": "+100 XP",
+      "rarity": "common",
+      "timestamp": 1769198029226,
+      "id": "1462799244422418516_1769198029226_7"
+    },
+    {
+      "name": "Poção de Vida",
+      "type": "potion",
+      "value": 50,
+      "emoji": "🧪",
+      "description": "Restaura 50 HP em próxima batalha",
+      "rarity": "common",
+      "timestamp": 1769198029226,
+      "id": "1462799244422418516_1769198029226_8"
+    },
+    {
+      "name": "Poção de Força",
+      "type": "potion",
+      "value": 30,
+      "emoji": "💪",
+      "description": "+30% de dano no próximo ataque",
+      "rarity": "common",
+      "timestamp": 1769198029226,
+      "id": "1462799244422418516_1769198029226_9"
+    }
+  ]
+}

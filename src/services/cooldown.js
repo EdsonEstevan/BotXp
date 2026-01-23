@@ -7,12 +7,20 @@ function loadCooldowns() {
     try {
         if (fs.existsSync(COOLDOWN_FILE)) {
             const data = fs.readFileSync(COOLDOWN_FILE, 'utf8');
-            return JSON.parse(data);
+            const parsed = JSON.parse(data);
+            // migração: formato antigo era { userId: timestamp }
+            if (!parsed.daily && Object.values(parsed).every(v => typeof v === 'number')) {
+                return { daily: parsed, weekly: {}, monthly: {} };
+            }
+            if (!parsed.daily) parsed.daily = {};
+            if (!parsed.weekly) parsed.weekly = {};
+            if (!parsed.monthly) parsed.monthly = {};
+            return parsed;
         }
     } catch (err) {
         console.error('[Cooldown] Erro ao carregar cooldowns:', err);
     }
-    return {};
+    return { daily: {}, weekly: {}, monthly: {} };
 }
 
 function saveCooldowns(cooldowns) {
@@ -23,30 +31,57 @@ function saveCooldowns(cooldowns) {
     }
 }
 
-function canUseSalario(userId) {
+function ensureBuckets(cooldowns) {
+    if (!cooldowns.daily) cooldowns.daily = {};
+    if (!cooldowns.weekly) cooldowns.weekly = {};
+    if (!cooldowns.monthly) cooldowns.monthly = {};
+}
+
+function canUseGeneric(userId, bucket, intervalMs) {
     const cooldowns = loadCooldowns();
-    
-    if (!cooldowns[userId]) {
-        return { allowed: true, timeLeft: 0 };
-    }
-    
-    const lastUsed = cooldowns[userId];
-    const now = Date.now();
-    const diff = now - lastUsed;
-    const twentyFourHours = 24 * 60 * 60 * 1000; // 86400000ms
-    
-    if (diff >= twentyFourHours) {
-        return { allowed: true, timeLeft: 0 };
-    }
-    
-    const timeLeft = twentyFourHours - diff;
-    return { allowed: false, timeLeft };
+    ensureBuckets(cooldowns);
+
+    const lastUsed = cooldowns[bucket][userId];
+    if (!lastUsed) return { allowed: true, timeLeft: 0 };
+
+    const diff = Date.now() - lastUsed;
+    if (diff >= intervalMs) return { allowed: true, timeLeft: 0 };
+
+    return { allowed: false, timeLeft: intervalMs - diff };
+}
+
+function recordGeneric(userId, bucket) {
+    const cooldowns = loadCooldowns();
+    ensureBuckets(cooldowns);
+    cooldowns[bucket][userId] = Date.now();
+    saveCooldowns(cooldowns);
+}
+
+function canUseSalario(userId) {
+    const twentyFourHours = 24 * 60 * 60 * 1000;
+    return canUseGeneric(userId, 'daily', twentyFourHours);
 }
 
 function recordSalarioUse(userId) {
-    const cooldowns = loadCooldowns();
-    cooldowns[userId] = Date.now();
-    saveCooldowns(cooldowns);
+    return recordGeneric(userId, 'daily');
+}
+
+function canUseWeekly(userId) {
+    const oneWeek = 7 * 24 * 60 * 60 * 1000;
+    return canUseGeneric(userId, 'weekly', oneWeek);
+}
+
+function recordWeeklyUse(userId) {
+    return recordGeneric(userId, 'weekly');
+}
+
+function canUseMonthly(userId) {
+    const oneMonth = 30 * 24 * 60 * 60 * 1000;
+    return canUseGeneric(userId, 'monthly', oneMonth);
+}
+
+function recordMonthlyUse(userId) {
+    return recordGeneric(userId, 'monthly');
 }
 
 function formatTimeLeft(ms) {
@@ -60,5 +95,9 @@ function formatTimeLeft(ms) {
 module.exports = {
     canUseSalario,
     recordSalarioUse,
+    canUseWeekly,
+    recordWeeklyUse,
+    canUseMonthly,
+    recordMonthlyUse,
     formatTimeLeft,
 };

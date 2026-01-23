@@ -68,7 +68,16 @@ module.exports = {
                 .addIntegerOption(option =>
                     option.setName('quantidade')
                         .setDescription('Quantas moedas tentar roubar? (máx: 1000)')
-                        .setRequired(false))),
+                        .setRequired(false)))
+        .addSubcommand(sub =>
+            sub.setName('termoo')
+                .setDescription('Jogue o Termoo diário (palavra de 5 letras)')
+                .addStringOption(option =>
+                    option.setName('palpite')
+                        .setDescription('Seu palpite de 5 letras')
+                        .setRequired(true)
+                        .setMaxLength(5)
+                        .setMinLength(5))),
     
     async execute(interaction, client) {
         const subcommand = interaction.options.getSubcommand();

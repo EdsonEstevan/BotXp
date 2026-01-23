@@ -8,12 +8,24 @@
   "1377390755093413958": {
     "goblin": 1,
     "arqueiro": 1,
-    "barbaro": 0,
-    "dragao": 0
+    "barbaro": 1,
+    "dragao": 1
   },
   "1377390240058052620": {
     "goblin": 0,
     "arqueiro": 1,
+    "barbaro": 0,
+    "dragao": 1
+  },
+  "464965118174953482": {
+    "goblin": 0,
+    "arqueiro": 1,
+    "barbaro": 0,
+    "dragao": 0
+  },
+  "1035219548758089789": {
+    "goblin": 1,
+    "arqueiro": 0,
     "barbaro": 0,
     "dragao": 0
   }

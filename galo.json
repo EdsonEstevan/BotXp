@@ -1,0 +1,178 @@
+{
+  "users": {
+    "1462799244422418516": {
+      "roosters": [
+        {
+          "id": "gmkr8jbcs8359",
+          "name": "Corredor Tornado",
+          "typeId": "corredor_tornado",
+          "rarity": "raro",
+          "level": 2,
+          "xp": 15,
+          "npcChance": 63,
+          "items": [
+            "esporas"
+          ],
+          "alive": true
+        },
+        {
+          "id": "gmkr8wcxb7664",
+          "name": "Rogerio",
+          "typeId": "corredor",
+          "rarity": "comum",
+          "level": 1,
+          "xp": 0,
+          "npcChance": 60,
+          "items": [],
+          "alive": false
+        },
+        {
+          "id": "gmkra81dd9285",
+          "name": "Corredor de Vila",
+          "typeId": "corredor",
+          "rarity": "comum",
+          "level": 1,
+          "xp": 0,
+          "npcChance": 60,
+          "items": [],
+          "alive": true
+        },
+        {
+          "id": "gmkra8bt6253",
+          "name": "Luis",
+          "typeId": "faqueiro",
+          "rarity": "comum",
+          "level": 1,
+          "xp": 0,
+          "npcChance": 60,
+          "items": [],
+          "alive": true
+        },
+        {
+          "id": "gmkra8jnk1815",
+          "name": "fernando",
+          "typeId": "tank",
+          "rarity": "comum",
+          "level": 1,
+          "xp": 0,
+          "npcChance": 60,
+          "items": [],
+          "alive": true
+        },
+        {
+          "id": "gmkra8qaf6180",
+          "name": "Paulo",
+          "typeId": "atirador",
+          "rarity": "comum",
+          "level": 1,
+          "xp": 0,
+          "npcChance": 60,
+          "items": [],
+          "alive": false
+        },
+        {
+          "id": "gmkra8ygt7541",
+          "name": "Danilo",
+          "typeId": "corredor",
+          "rarity": "comum",
+          "level": 1,
+          "xp": 0,
+          "npcChance": 60,
+          "items": [],
+          "alive": true
+        }
+      ],
+      "items": {
+        "escudo_carvalho": 1,
+        "esporas": 1
+      }
+    },
+    "1377390755093413958": {
+      "roosters": [
+        {
+          "id": "gmkr8x5f67430",
+          "name": "Atirador de Quintal",
+          "typeId": "atirador",
+          "rarity": "comum",
+          "level": 1,
+          "xp": 90,
+          "npcChance": 60,
+          "items": [],
+          "alive": true
+        }
+      ],
+      "items": {}
+    },
+    "1377390240058052620": {
+      "roosters": [
+        {
+          "id": "gmkr97zb48519",
+          "name": "Eduardo",
+          "typeId": "corredor",
+          "rarity": "comum",
+          "level": 1,
+          "xp": 0,
+          "npcChance": 60,
+          "items": [],
+          "alive": false
+        },
+        {
+          "id": "gmkr9j4xv600",
+          "name": "Atirador de Quintal",
+          "typeId": "atirador",
+          "rarity": "comum",
+          "level": 1,
+          "xp": 0,
+          "npcChance": 60,
+          "items": [],
+          "alive": true
+        },
+        {
+          "id": "gmkray9t33064",
+          "name": "Edinho",
+          "typeId": "corredor",
+          "rarity": "comum",
+          "level": 1,
+          "xp": 0,
+          "npcChance": 60,
+          "items": [],
+          "alive": true
+        },
+        {
+          "id": "gmkrayuvb7799",
+          "name": "XPzinho",
+          "typeId": "faqueiro",
+          "rarity": "comum",
+          "level": 1,
+          "xp": 0,
+          "npcChance": 60,
+          "items": [],
+          "alive": true
+        },
+        {
+          "id": "gmkraz7tp3754",
+          "name": "XPzasso",
+          "typeId": "corredor",
+          "rarity": "comum",
+          "level": 1,
+          "xp": 0,
+          "npcChance": 60,
+          "items": [],
+          "alive": true
+        },
+        {
+          "id": "gmkrazeci6610",
+          "name": "Fernandinho",
+          "typeId": "corredor_tornado",
+          "rarity": "raro",
+          "level": 1,
+          "xp": 90,
+          "npcChance": 62,
+          "items": [],
+          "alive": true
+        }
+      ],
+      "items": {}
+    }
+  }
+}
