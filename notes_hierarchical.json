@@ -1,0 +1,90 @@
+{
+  "464965118174953482": {
+    "settings": {
+      "current_path": ""
+    },
+    "folders": {
+      "NPCS": {
+        "owner": "464965118174953482",
+        "shared_with": [],
+        "notes": {},
+        "folders": {
+          "RPG PABLO": {
+            "owner": "464965118174953482",
+            "shared_with": [],
+            "notes": {},
+            "folders": {
+              "Relevantes para meu personagem": {
+                "owner": "464965118174953482",
+                "shared_with": [],
+                "notes": {
+                  "1769184078963_51fwpljlh": {
+                    "owner": "464965118174953482",
+                    "title": "Yelena",
+                    "content": "Ela é mó gata",
+                    "shared_with": [],
+                    "created": 1769184078963,
+                    "updated": 1769184078963
+                  },
+                  "1769184146690_ub5abqm17": {
+                    "owner": "464965118174953482",
+                    "title": "Itachi",
+                    "content": "Esse definitivamente não é o nome dele.",
+                    "shared_with": [],
+                    "created": 1769184146690,
+                    "updated": 1769184146690
+                  }
+                },
+                "folders": {}
+              }
+            }
+          }
+        }
+      },
+      "Locais": {
+        "owner": "464965118174953482",
+        "shared_with": [],
+        "notes": {},
+        "folders": {
+          "Dentro do Trem": {
+            "owner": "464965118174953482",
+            "shared_with": [],
+            "notes": {
+              "1769180404857_o15h1sdzw": {
+                "owner": "464965118174953482",
+                "title": "Yelena",
+                "content": "Teste",
+                "shared_with": [],
+                "created": 1769180404857,
+                "updated": 1769180404857
+              }
+            },
+            "folders": {}
+          }
+        }
+      }
+    }
+  },
+  "1462799244422418516": {
+    "settings": {
+      "current_path": ""
+    },
+    "folders": {
+      "Mogo": {
+        "owner": "1462799244422418516",
+        "shared_with": [],
+        "notes": {
+          "1769184738771_9pm2kszp4": {
+            "owner": "1462799244422418516",
+            "title": "Teste",
+            "content": "Odeio DivinoSabor",
+            "shared_with": [],
+            "created": 1769184738771,
+            "updated": 1769184738771
+          }
+        },
+        "folders": {}
+      }
+    }
+  }
+}

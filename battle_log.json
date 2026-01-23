@@ -1,0 +1,29 @@
+[
+  {
+    "timestamp": 1769186201826,
+    "attacker": "1377390240058052620",
+    "defender": "1377390755093413958",
+    "won": true,
+    "stars": 1,
+    "stolen": 25,
+    "rounds": 3
+  },
+  {
+    "timestamp": 1769186006493,
+    "attacker": "1377390755093413958",
+    "defender": "1377390240058052620",
+    "won": true,
+    "stars": 3,
+    "stolen": 18,
+    "rounds": 0
+  },
+  {
+    "timestamp": 1769185127185,
+    "attacker": "1462799244422418516",
+    "defender": "1377390240058052620",
+    "won": true,
+    "stars": 3,
+    "stolen": 25,
+    "rounds": 0
+  }
+]
