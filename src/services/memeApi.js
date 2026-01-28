@@ -3,6 +3,10 @@ const { EmbedBuilder } = require('discord.js');
 
 const IMAGE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
 const VIDEO_EXTENSIONS = ['mp4', 'webm', 'gifv'];
+const BR_SUBREDDITS = ['HUEstation', 'brasilmemes', 'MemesBrasil', 'shitpostbr', 'MemesDoBrasil'];
+const RECENT_LIMIT = 80;
+const recentLinks = [];
+const recentSet = new Set();
 
 function isImage(url) {
     return IMAGE_EXTENSIONS.some(ext => url.endsWith('.' + ext));
@@ -11,9 +15,35 @@ function isVideo(url) {
     return VIDEO_EXTENSIONS.some(ext => url.endsWith('.' + ext));
 }
 
-async function fetchMeme({ subreddit, memeSet, tries = 0 }) {
-    const MAX_TRIES = 5;
-    const endpoint = subreddit ? `https://meme-api.com/gimme/${subreddit}` : 'https://meme-api.com/gimme';
+function pickSub(subreddit, subreddits) {
+    if (subreddit) return subreddit;
+    const list = Array.isArray(subreddits) && subreddits.length ? subreddits : BR_SUBREDDITS;
+    return list[Math.floor(Math.random() * list.length)];
+}
+
+function isRecent(link, memeSet) {
+    return (memeSet && memeSet.has(link)) || recentSet.has(link);
+}
+
+function pushRecent(link, memeSet) {
+    if (memeSet) {
+        memeSet.add(link);
+        if (memeSet.size > 20) memeSet.delete([...memeSet][0]);
+    }
+    if (!recentSet.has(link)) {
+        recentLinks.push(link);
+        recentSet.add(link);
+        if (recentLinks.length > RECENT_LIMIT) {
+            const first = recentLinks.shift();
+            recentSet.delete(first);
+        }
+    }
+}
+
+async function fetchMeme({ subreddit, subreddits, memeSet, tries = 0 }) {
+    const MAX_TRIES = 8;
+    const picked = pickSub(subreddit, subreddits);
+    const endpoint = picked ? `https://meme-api.com/gimme/${picked}` : 'https://meme-api.com/gimme';
     try {
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), 7000);
@@ -21,7 +51,7 @@ async function fetchMeme({ subreddit, memeSet, tries = 0 }) {
         clearTimeout(timeout);
         if (!res.ok) throw new Error('HTTP error');
         const data = await res.json();
-        console.log(`[memeApi] Tentativa ${tries+1}:`, data);
+        console.log(`[memeApi] Tentativa ${tries+1} sub=${picked}:`, data);
         if (!data) {
             console.log('[memeApi] Falha: data vazio');
         } else if (data.nsfw) {
@@ -30,19 +60,18 @@ async function fetchMeme({ subreddit, memeSet, tries = 0 }) {
             console.log('[memeApi] Ignorado: Spoiler');
         } else if (!data.url) {
             console.log('[memeApi] Falha: url vazio');
-        } else if (memeSet.has(data.postLink)) {
+        } else if (isRecent(data.postLink, memeSet)) {
             console.log('[memeApi] Ignorado: repetido', data.postLink);
         }
-        if (!data || data.nsfw || data.spoiler || !data.url || memeSet.has(data.postLink)) {
+        if (!data || data.nsfw || data.spoiler || !data.url || isRecent(data.postLink, memeSet)) {
             if (tries < MAX_TRIES) {
-                return fetchMeme({ subreddit, memeSet, tries: tries + 1 });
+                return fetchMeme({ subreddit, subreddits, memeSet, tries: tries + 1 });
             } else {
                 console.log('[memeApi] Erro: Limite de tentativas atingido.');
                 return null;
             }
         }
-        memeSet.add(data.postLink);
-        if (memeSet.size > 10) memeSet.delete([...memeSet][0]);
+        pushRecent(data.postLink, memeSet);
         let embed = new EmbedBuilder()
             .setTitle(data.title)
             .setURL(data.postLink)
@@ -62,10 +91,10 @@ async function fetchMeme({ subreddit, memeSet, tries = 0 }) {
     } catch (err) {
         console.log('[memeApi] Erro exception:', err);
         if (tries < MAX_TRIES) {
-            return fetchMeme({ subreddit, memeSet, tries: tries + 1 });
+            return fetchMeme({ subreddit, subreddits, memeSet, tries: tries + 1 });
         }
         return null;
     }
 }
 
-module.exports = fetchMeme;
+module.exports = { fetchMeme, BR_SUBREDDITS };

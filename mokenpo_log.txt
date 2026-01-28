@@ -1,0 +1,76 @@
+Semana 1 que o bot está sendo usado
+Dia 28 do mês janeiro do ano 2026
+Pokemon do dia: cradily
+Comandos usados ao longo do dia:
+edson_estevan tentou charizard (gen 1, tipos FIRE/FLYING, 90.50kg, 1.70m). Alvo: gen 3 (maior), tipos ROCK/GRASS, peso dif -30.10, altura dif -0.20. Tipos: nenhum tipo bate; Peso: correto pesa menos; Altura: correto é mais baixo
+edson_estevan tentou greninja (gen 6, tipos WATER/DARK, 40.00kg, 1.50m). Alvo: gen 3 (menor), tipos ROCK/GRASS, peso dif 20.40, altura dif 0.00. Tipos: nenhum tipo bate; Peso: correto pesa mais; Altura: igual
+edson_estevan tentou sceptile (gen 3, tipos GRASS, 52.20kg, 1.70m). Alvo: gen 3 (igual), tipos ROCK/GRASS, peso dif 8.20, altura dif -0.20. Tipos: apenas um tipo bate; Peso: correto pesa mais; Altura: correto é mais baixo
+edson_estevan tentou gardevoir (gen 3, tipos PSYCHIC/FAIRY, 48.40kg, 1.60m). Alvo: gen 3 (igual), tipos ROCK/GRASS, peso dif 12.00, altura dif -0.10. Tipos: nenhum tipo bate; Peso: correto pesa mais; Altura: correto é mais baixo
+edson_estevan tentou nincada (gen 3, tipos BUG/GROUND, 5.50kg, 0.50m). Alvo: gen 3 (igual), tipos ROCK/GRASS, peso dif 54.90, altura dif 1.00. Tipos: nenhum tipo bate; Peso: correto pesa mais; Altura: correto é mais alto
+edson_estevan tentou loudred (gen 3, tipos NORMAL, 40.50kg, 1.00m). Alvo: gen 3 (igual), tipos ROCK/GRASS, peso dif 19.90, altura dif 0.50. Tipos: nenhum tipo bate; Peso: correto pesa mais; Altura: correto é mais alto
+edson_estevan tentou nosepass (gen 3, tipos ROCK, 97.00kg, 1.00m). Alvo: gen 3 (igual), tipos ROCK/GRASS, peso dif -36.60, altura dif 0.50. Tipos: apenas um tipo bate; Peso: correto pesa menos; Altura: correto é mais alto
+edson_estevan tentou lairon (gen 3, tipos STEEL/ROCK, 120.00kg, 0.90m). Alvo: gen 3 (igual), tipos ROCK/GRASS, peso dif -59.60, altura dif 0.60. Tipos: apenas um tipo bate; Peso: correto pesa menos; Altura: correto é mais alto
+edson_estevan tentou anorith (gen 3, tipos ROCK/BUG, 12.50kg, 0.70m). Alvo: gen 3 (igual), tipos ROCK/GRASS, peso dif 47.90, altura dif 0.80. Tipos: apenas um tipo bate; Peso: correto pesa mais; Altura: correto é mais alto
+edson_estevan tentou regirock (gen 3, tipos ROCK, 230.00kg, 1.70m). Alvo: gen 3 (igual), tipos ROCK/GRASS, peso dif -169.60, altura dif -0.20. Tipos: apenas um tipo bate; Peso: correto pesa menos; Altura: correto é mais baixo
+edson_estevan tentou cradily (gen 3, tipos ROCK/GRASS, 60.40kg, 1.50m). Alvo: gen 3 (igual), tipos ROCK/GRASS, peso dif 0.00, altura dif 0.00. Tipos: ambos os tipos batem; Peso: igual; Altura: igual [ACERTOU]
+edson_estevan tentou cradily (gen 3, tipos ROCK/GRASS, 60.40kg, 1.50m). Alvo: gen 3 (igual), tipos ROCK/GRASS, peso dif 0.00, altura dif 0.00. Tipos: ambos os tipos batem; Peso: igual; Altura: igual [ACERTOU]
+edson_estevan tentou sceptile (gen 3, tipos GRASS, 52.20kg, 1.70m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 8.20 (correto pesa mais) | Altura: dif -0.20 (correto é mais baixo)
+  - Tipos: apenas um tipo bate
+edson_estevan tentou sceptile (gen 3, tipos GRASS, 52.20kg, 1.70m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 8.20 (correto pesa mais) | Altura: dif -0.20 (correto é mais baixo)
+  - Tipos: apenas um tipo bate
+edson_estevan tentou sceptile (gen 3, tipos GRASS, 52.20kg, 1.70m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 8.20 (correto pesa mais) | Altura: dif -0.20 (correto é mais baixo)
+  - Tipos: apenas um tipo bate
+edson_estevan tentou sceptile (gen 3, tipos GRASS, 52.20kg, 1.70m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 8.20 (correto pesa mais) | Altura: dif -0.20 (correto é mais baixo)
+  - Tipos: apenas um tipo bate
+edson_estevan tentou cradily (gen 3, tipos ROCK/GRASS, 60.40kg, 1.50m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 0.00 (igual) | Altura: dif 0.00 (igual)
+  - Tipos: ambos os tipos batem [ACERTOU]
+edson_estevan tentou cradily (gen 3, tipos ROCK/GRASS, 60.40kg, 1.50m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 0.00 (igual) | Altura: dif 0.00 (igual)
+  - Tipos: ambos os tipos batem [ACERTOU]
+edson_estevan tentou cradily (gen 3, tipos ROCK/GRASS, 60.40kg, 1.50m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 0.00 (igual) | Altura: dif 0.00 (igual)
+  - Tipos: ambos os tipos batem [ACERTOU]
+edson_estevan tentou cradily (gen 3, tipos ROCK/GRASS, 60.40kg, 1.50m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 0.00 (igual) | Altura: dif 0.00 (igual)
+  - Tipos: ambos os tipos batem [ACERTOU]
+edson_estevan tentou cradily (gen 3, tipos ROCK/GRASS, 60.40kg, 1.50m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 0.00 (igual) | Altura: dif 0.00 (igual)
+  - Tipos: ambos os tipos batem [ACERTOU]
+edson_estevan tentou cradily (gen 3, tipos ROCK/GRASS, 60.40kg, 1.50m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 0.00 (igual) | Altura: dif 0.00 (igual)
+  - Tipos: ambos os tipos batem [ACERTOU]
+edson_estevan tentou cradily (gen 3, tipos ROCK/GRASS, 60.40kg, 1.50m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 0.00 (igual) | Altura: dif 0.00 (igual)
+  - Tipos: ambos os tipos batem [ACERTOU]
+edson_estevan tentou cradily (gen 3, tipos ROCK/GRASS, 60.40kg, 1.50m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 0.00 (igual) | Altura: dif 0.00 (igual)
+  - Tipos: ambos os tipos batem [ACERTOU]
+joab.sr.alzheimer.ed tentou cradily (gen 3, tipos ROCK/GRASS, 60.40kg, 1.50m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 0.00 (igual) | Altura: dif 0.00 (igual)
+  - Tipos: ambos os tipos batem [ACERTOU]
+edson_estevan tentou cradily (gen 3, tipos ROCK/GRASS, 60.40kg, 1.50m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 0.00 (igual) | Altura: dif 0.00 (igual)
+  - Tipos: ambos os tipos batem [ACERTOU]
+edson_estevan tentou cradily (gen 3, tipos ROCK/GRASS, 60.40kg, 1.50m).
+  - Alvo: gen 3 (igual), tipos ROCK/GRASS
+  - Peso: dif 0.00 (igual) | Altura: dif 0.00 (igual)
+  - Tipos: ambos os tipos batem [ACERTOU]

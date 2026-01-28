@@ -1,18 +1,18 @@
 {
   "1462799244422418516": {
     "goblin": 1,
-    "arqueiro": 0,
+    "arqueiro": 4,
     "barbaro": 1,
-    "dragao": 0
+    "dragao": 5
   },
   "1377390755093413958": {
     "goblin": 1,
     "arqueiro": 1,
-    "barbaro": 1,
-    "dragao": 1
+    "barbaro": 2,
+    "dragao": 7
   },
   "1377390240058052620": {
-    "goblin": 0,
+    "goblin": 2,
     "arqueiro": 1,
     "barbaro": 0,
     "dragao": 1
@@ -21,12 +21,12 @@
     "goblin": 0,
     "arqueiro": 1,
     "barbaro": 0,
-    "dragao": 0
+    "dragao": 1
   },
   "1035219548758089789": {
     "goblin": 1,
-    "arqueiro": 0,
-    "barbaro": 0,
+    "arqueiro": 3,
+    "barbaro": 5,
     "dragao": 0
   }
 }

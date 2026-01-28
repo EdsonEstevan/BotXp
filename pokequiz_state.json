@@ -1,0 +1,92 @@
+{
+  "challenges": [
+    {
+      "id": "1769611030534-1552",
+      "channelId": "1463141394532270102",
+      "messageId": "1466079671241146483",
+      "pokemon": {
+        "id": 132,
+        "name": "ditto",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
+      },
+      "genMin": 1,
+      "genMax": 1,
+      "winners": [
+        {
+          "userId": "1462799244422418516",
+          "userTag": "edson_estevan",
+          "prize": 1000
+        }
+      ],
+      "createdAt": 1769611031163
+    },
+    {
+      "id": "1769611280558-8416",
+      "channelId": "1463141394532270102",
+      "messageId": "1466080719733522639",
+      "pokemon": {
+        "id": 126,
+        "name": "magmar",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/126.png"
+      },
+      "genMin": 1,
+      "genMax": 1,
+      "winners": [],
+      "createdAt": 1769611281237
+    },
+    {
+      "id": "1769611293424-4745",
+      "channelId": "1463141394532270102",
+      "messageId": "1466080774343229520",
+      "pokemon": {
+        "id": 78,
+        "name": "rapidash",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/78.png"
+      },
+      "genMin": 1,
+      "genMax": 1,
+      "winners": [
+        {
+          "userId": "1462799244422418516",
+          "userTag": "edson_estevan",
+          "prize": 1000
+        }
+      ],
+      "createdAt": 1769611294249
+    },
+    {
+      "id": "1769611580112-497",
+      "channelId": "1466081487471509644",
+      "messageId": "1466081976401526847",
+      "pokemon": {
+        "id": 779,
+        "name": "bruxish",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/779.png"
+      },
+      "genMin": 1,
+      "genMax": 9,
+      "winners": [
+        {
+          "userId": "1377390755093413958",
+          "userTag": "xp.fernando",
+          "prize": 1000
+        }
+      ],
+      "createdAt": 1769611581057
+    },
+    {
+      "id": "1769625000834-2469",
+      "channelId": "1466081487471509644",
+      "messageId": "1466138267018723430",
+      "pokemon": {
+        "id": 70,
+        "name": "weepinbell",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/70.png"
+      },
+      "genMin": 1,
+      "genMax": 3,
+      "winners": [],
+      "createdAt": 1769625001553
+    }
+  ]
+}

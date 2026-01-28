@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
-const fetchMeme = require('../../services/memeApi');
+const { fetchMeme } = require('../../services/memeApi');
 const { createMemeButtonRow } = require('../../components/memeButton');
 
 module.exports = {

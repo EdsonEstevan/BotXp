@@ -8,12 +8,14 @@
           "typeId": "corredor_tornado",
           "rarity": "raro",
           "level": 2,
-          "xp": 15,
-          "npcChance": 63,
+          "xp": 40,
+          "npcChance": 64,
           "items": [
-            "esporas"
+            "esporas",
+            "ponta_tripla",
+            "elixir_furia"
           ],
-          "alive": true
+          "alive": false
         },
         {
           "id": "gmkr8wcxb7664",
@@ -83,8 +85,24 @@
         }
       ],
       "items": {
-        "escudo_carvalho": 1,
-        "esporas": 1
+        "escudo_carvalho": 11,
+        "esporas": 3,
+        "soco_gaules": 6,
+        "faca": 5,
+        "erva_vigor": 2,
+        "garras_veneno": 1,
+        "ponta_tripla": 1,
+        "bico_aco": 6,
+        "cinto_balas": 1,
+        "facao": 5,
+        "armadura_leve": 4,
+        "escudo_ferro": 1,
+        "municao_perfurante": 3,
+        "amuleta_sorte": 1,
+        "elixir_furia": 1,
+        "armadura_pesada": 1,
+        "elixir_guardiao": 2,
+        "olho_agui": 1
       }
     },
     "1377390755093413958": {

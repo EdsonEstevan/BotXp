@@ -1,7 +1,7 @@
 const schedule = require('node-schedule');
 const fs = require('fs');
 const path = require('path');
-const fetchMeme = require('./memeApi');
+const { fetchMeme, BR_SUBREDDITS } = require('./memeApi');
 const { EmbedBuilder } = require('discord.js');
 
 const SCHEDULES_FILE = path.join(__dirname, '..', '..', 'schedules.json');
@@ -43,7 +43,7 @@ function createScheduledJob(client, jobData) {
             }
             
             const memeSet = new Set();
-            const memeData = await fetchMeme({ subreddit, memeSet });
+            const memeData = await fetchMeme({ subreddit, subreddits: BR_SUBREDDITS, memeSet });
             
             if (!memeData) {
                 await channel.send('Não foi possível obter um meme agendado. 😢');

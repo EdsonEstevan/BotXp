@@ -1,9 +1,9 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events } = require('discord.js');
-const fetchMeme = require('../services/memeApi');
+const { fetchMeme } = require('../services/memeApi');
 
 const memeSets = new Map(); // messageId -> Set of last 10 postLinks
 const buttonTimeouts = new Map(); // messageId -> timeoutId
-const subredditMap = new Map(); // messageId -> subreddit
+const subredditMap = new Map(); // messageId -> subreddit list or single
 
 function createMemeButtonRow(userId, subreddit, disabled = false) {
     return new ActionRowBuilder().addComponents(
@@ -17,6 +17,9 @@ function createMemeButtonRow(userId, subreddit, disabled = false) {
 
 module.exports = {
     createMemeButtonRow,
+    registerMemeSubreddits: (messageId, subreddits) => {
+        subredditMap.set(messageId, subreddits);
+    },
     setupMemeButtonHandler: client => {
         client.on('interactionCreate', async interaction => {
             if (!interaction.isButton()) return;
@@ -29,23 +32,24 @@ module.exports = {
             // Desabilita botão e mostra carregando
             const message = interaction.message;
             const memeSet = memeSets.get(message.id) || new Set();
-            const sub = subreddit === 'any' ? undefined : subreddit;
-            const rowLoading = createMemeButtonRow(userId, sub, true);
+            const savedSubs = subredditMap.get(message.id);
+            const sub = subreddit === 'any' || subreddit === 'brmix' ? undefined : subreddit;
+            const rowLoading = createMemeButtonRow(userId, subreddit, true);
             await interaction.update({ content: 'Carregando...', embeds: [], components: [rowLoading] });
             // Busca novo meme
-            const memeData = await fetchMeme({ subreddit: sub, memeSet });
+            const memeData = await fetchMeme({ subreddit: sub, subreddits: savedSubs, memeSet });
             if (!memeData) {
                 await interaction.editReply({ content: 'Não foi possível obter um meme. Tente novamente mais tarde.', embeds: [], components: [rowLoading] });
                 return;
             }
             const { embed, content, isVideo } = memeData;
-            const row = createMemeButtonRow(userId, sub, false);
+            const row = createMemeButtonRow(userId, subreddit, false);
             memeSets.set(message.id, memeSet);
             await interaction.editReply({ content, embeds: [embed], components: [row] });
             // Timeout para desabilitar botão após 2 minutos
             if (buttonTimeouts.has(message.id)) clearTimeout(buttonTimeouts.get(message.id));
             const timeoutId = setTimeout(async () => {
-                const disabledRow = createMemeButtonRow(userId, sub, true);
+                const disabledRow = createMemeButtonRow(userId, subreddit, true);
                 try {
                     await message.edit({ components: [disabledRow] });
                 } catch {}

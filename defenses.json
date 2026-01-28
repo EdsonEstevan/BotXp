@@ -3,18 +3,24 @@
     "muro": 1,
     "torre": 1,
     "castelo": 0,
-    "fortaleza": 3
+    "fortaleza": 14
   },
   "1377390755093413958": {
     "muro": 2,
     "torre": 1,
     "castelo": 1,
-    "fortaleza": 2
+    "fortaleza": 5
   },
   "1377390240058052620": {
     "muro": 0,
     "torre": 2,
-    "castelo": 1,
-    "fortaleza": 1
+    "castelo": 8,
+    "fortaleza": 8
+  },
+  "1035219548758089789": {
+    "muro": 0,
+    "torre": 0,
+    "castelo": 0,
+    "fortaleza": 10
   }
 }

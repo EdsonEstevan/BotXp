@@ -1,0 +1,25 @@
+{
+  "week": 1,
+  "weekStart": "2026-01-28",
+  "current": {
+    "day": "2026-01-28",
+    "pokemon": {
+      "id": 346,
+      "name": "cradily",
+      "types": [
+        "rock",
+        "grass"
+      ],
+      "weightKg": 60.4,
+      "heightM": 1.5,
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/346.png",
+      "generation": "generation-iii",
+      "generationNum": 3
+    },
+    "winners": [
+
+    ]
+  },
+  "lastLogDay": "2026-01-28",
+  "lastLogWeek": 1
+}

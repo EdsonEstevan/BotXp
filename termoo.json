@@ -1,100 +1,73 @@
 {
-  "date": "2026-01-23",
-  "word": "TORRE",
+  "date": "2026-01-28",
+  "word": "FARDO",
   "winners": [
     "1462799244422418516",
-    "1234866994826711050",
-    "1377390240058052620"
+    "1377390755093413958"
   ],
   "attempts": {
-    "464965118174953482": [
-      {
-        "guess": "PAUTO",
-        "feedback": "⬛⬛⬛🟨🟨"
-      },
-      {
-        "guess": "EAIOU",
-        "feedback": "🟨⬛⬛🟨⬛"
-      },
-      {
-        "guess": "MILHO",
-        "feedback": "⬛⬛⬛⬛🟨"
-      },
-      {
-        "guess": "PINTO",
-        "feedback": "⬛⬛⬛🟨🟨"
-      }
-    ],
     "1462799244422418516": [
       {
-        "guess": "TRECO",
-        "feedback": "🟩🟨🟨⬛🟨"
+        "guess": "MEIAS",
+        "feedback": "⬛⬛⬛🟨⬛"
       },
       {
-        "guess": "TORPE",
-        "feedback": "🟩🟩🟩⬛🟩"
+        "guess": "TRATO",
+        "feedback": "⬛🟨🟨⬛🟩"
       },
       {
-        "guess": "TORCE",
-        "feedback": "🟩🟩🟩⬛🟩"
+        "guess": "RACHO",
+        "feedback": "🟨🟩⬛⬛🟩"
       },
       {
-        "guess": "TORDE",
-        "feedback": "🟩🟩🟩⬛🟩"
+        "guess": "BARCO",
+        "feedback": "⬛🟩🟩⬛🟩"
       },
       {
-        "guess": "TORRE",
+        "guess": "LARGO",
+        "feedback": "⬛🟩🟩⬛🟩"
+      },
+      {
+        "guess": "FARDO",
         "feedback": "🟩🟩🟩🟩🟩"
       }
     ],
     "1377390755093413958": [
       {
-        "guess": "OXALÁ",
-        "feedback": "🟨⬛⬛⬛⬛"
+        "guess": "TERMO",
+        "feedback": "⬛⬛🟩⬛🟩"
       },
       {
-        "guess": "VASCO",
-        "feedback": "⬛⬛⬛⬛🟨"
+        "guess": "PARDO",
+        "feedback": "⬛🟩🟩🟩🟩"
       },
       {
-        "guess": "SAMBA",
-        "feedback": "⬛⬛⬛⬛⬛"
+        "guess": "DARDO",
+        "feedback": "⬛🟩🟩🟩🟩"
       },
       {
-        "guess": "TOTAL",
-        "feedback": "🟩🟩⬛⬛⬛"
+        "guess": "BARDO",
+        "feedback": "⬛🟩🟩🟩🟩"
       },
       {
-        "guess": "TORPE",
-        "feedback": "🟩🟩🟩⬛🟩"
-      },
-      {
-        "guess": "TORCE",
-        "feedback": "🟩🟩🟩⬛🟩"
-      }
-    ],
-    "1234866994826711050": [
-      {
-        "guess": "TORRE",
-        "feedback": "🟩🟩🟩🟩🟩"
-      }
-    ],
-    "1377390240058052620": [
-      {
-        "guess": "OXALA",
-        "feedback": "🟨⬛⬛⬛⬛"
-      },
-      {
-        "guess": "AUREO",
-        "feedback": "⬛⬛🟩🟨🟨"
-      },
-      {
-        "guess": "TORRE",
+        "guess": "FARDO",
         "feedback": "🟩🟩🟩🟩🟩"
       }
     ]
   },
   "log": [
+    {
+      "date": "2026-01-28",
+      "word": "FARDO"
+    },
+    {
+      "date": "2026-01-26",
+      "word": "CARTA"
+    },
+    {
+      "date": "2026-01-24",
+      "word": "VIDRO"
+    },
     {
       "date": "2026-01-23",
       "word": "TORRE"

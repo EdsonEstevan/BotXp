@@ -2,14 +2,45 @@
   "1377390755093413958": [],
   "1462799244422418516": [
     {
-      "name": "Riqueza Ancestral",
-      "type": "coins",
-      "value": 1000,
-      "emoji": "👑",
-      "description": "+1000 moedas",
+      "name": "Bárbaro Lendário",
+      "type": "unit",
+      "unit": "barbaro",
+      "quantity": 3,
+      "emoji": "⚔️✨",
+      "description": "Bárbaro x3 com +crítico",
       "rarity": "epic",
-      "timestamp": 1769198029226,
-      "id": "1462799244422418516_1769198029226_4"
+      "timestamp": 1769430937613,
+      "id": "1462799244422418516_1769430937613_8"
+    },
+    {
+      "name": "Poção de Vida",
+      "type": "potion",
+      "value": 50,
+      "emoji": "🧪",
+      "description": "Restaura 50 HP em próxima batalha",
+      "rarity": "common",
+      "timestamp": 1769430937613,
+      "id": "1462799244422418516_1769430937613_9"
+    },
+    {
+      "name": "Multiplicador 1.5x",
+      "type": "multiplier",
+      "value": 1.5,
+      "emoji": "📈",
+      "description": "+50% em próximas 3 batalhas",
+      "rarity": "rare",
+      "timestamp": 1769430976619,
+      "id": "1462799244422418516_1769430976619_4"
+    },
+    {
+      "name": "Símbolo do Poder",
+      "type": "symbol",
+      "value": 1,
+      "emoji": "⭐",
+      "description": "+1 símbolo de poder",
+      "rarity": "epic",
+      "timestamp": 1769430976619,
+      "id": "1462799244422418516_1769430976619_5"
     },
     {
       "name": "Arqueiro Elite",
@@ -19,48 +50,39 @@
       "emoji": "🏹✨",
       "description": "Arqueiro x2 com +esquiva",
       "rarity": "rare",
-      "timestamp": 1769198029226,
-      "id": "1462799244422418516_1769198029226_5"
+      "timestamp": 1769430976619,
+      "id": "1462799244422418516_1769430976619_6"
     },
     {
-      "name": "Poção de Força",
-      "type": "potion",
-      "value": 30,
-      "emoji": "💪",
-      "description": "+30% de dano no próximo ataque",
-      "rarity": "common",
-      "timestamp": 1769198029226,
-      "id": "1462799244422418516_1769198029226_6"
+      "name": "Goblin Premium",
+      "type": "unit",
+      "unit": "goblin",
+      "quantity": 3,
+      "emoji": "👺✨",
+      "description": "Goblin x3 + 10% de ataque",
+      "rarity": "rare",
+      "timestamp": 1769430976619,
+      "id": "1462799244422418516_1769430976619_7"
     },
     {
-      "name": "Scroll Antigo",
-      "type": "scroll",
-      "value": 100,
-      "emoji": "📜",
-      "description": "+100 XP",
-      "rarity": "common",
-      "timestamp": 1769198029226,
-      "id": "1462799244422418516_1769198029226_7"
+      "name": "Símbolo do Poder",
+      "type": "symbol",
+      "value": 1,
+      "emoji": "⭐",
+      "description": "+1 símbolo de poder",
+      "rarity": "epic",
+      "timestamp": 1769430976619,
+      "id": "1462799244422418516_1769430976619_8"
     },
     {
-      "name": "Poção de Vida",
-      "type": "potion",
-      "value": 50,
-      "emoji": "🧪",
-      "description": "Restaura 50 HP em próxima batalha",
-      "rarity": "common",
-      "timestamp": 1769198029226,
-      "id": "1462799244422418516_1769198029226_8"
-    },
-    {
-      "name": "Poção de Força",
-      "type": "potion",
-      "value": 30,
-      "emoji": "💪",
-      "description": "+30% de dano no próximo ataque",
-      "rarity": "common",
-      "timestamp": 1769198029226,
-      "id": "1462799244422418516_1769198029226_9"
+      "name": "Baú do Pirata",
+      "type": "coins",
+      "value": 400,
+      "emoji": "🏴‍☠️",
+      "description": "+400 moedas",
+      "rarity": "rare",
+      "timestamp": 1769430976619,
+      "id": "1462799244422418516_1769430976619_9"
     }
   ]
 }

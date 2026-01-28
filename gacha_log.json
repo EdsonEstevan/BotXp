@@ -1,6 +1,100 @@
 [
   {
     "userId": "1462799244422418516",
+    "timestamp": 1769430976621,
+    "pulls": 10,
+    "results": [
+      {
+        "name": "Fortaleza Impenetrável",
+        "rarity": "legendary"
+      },
+      {
+        "name": "Arqueiro Elite",
+        "rarity": "rare"
+      },
+      {
+        "name": "Poção de Força",
+        "rarity": "common"
+      },
+      {
+        "name": "Scroll Antigo",
+        "rarity": "common"
+      },
+      {
+        "name": "Multiplicador 1.5x",
+        "rarity": "rare"
+      },
+      {
+        "name": "Símbolo do Poder",
+        "rarity": "epic"
+      },
+      {
+        "name": "Arqueiro Elite",
+        "rarity": "rare"
+      },
+      {
+        "name": "Goblin Premium",
+        "rarity": "rare"
+      },
+      {
+        "name": "Símbolo do Poder",
+        "rarity": "epic"
+      },
+      {
+        "name": "Baú do Pirata",
+        "rarity": "rare"
+      }
+    ]
+  },
+  {
+    "userId": "1462799244422418516",
+    "timestamp": 1769430937617,
+    "pulls": 10,
+    "results": [
+      {
+        "name": "Scroll Antigo",
+        "rarity": "common"
+      },
+      {
+        "name": "Moedas Douradas",
+        "rarity": "common"
+      },
+      {
+        "name": "Baú do Pirata",
+        "rarity": "rare"
+      },
+      {
+        "name": "Poção de Força",
+        "rarity": "common"
+      },
+      {
+        "name": "Poção de Força",
+        "rarity": "common"
+      },
+      {
+        "name": "Moedas Douradas",
+        "rarity": "common"
+      },
+      {
+        "name": "Fortaleza Impenetrável",
+        "rarity": "legendary"
+      },
+      {
+        "name": "Fragmento Misterioso",
+        "rarity": "rare"
+      },
+      {
+        "name": "Bárbaro Lendário",
+        "rarity": "epic"
+      },
+      {
+        "name": "Poção de Vida",
+        "rarity": "common"
+      }
+    ]
+  },
+  {
+    "userId": "1462799244422418516",
     "timestamp": 1769198029230,
     "pulls": 10,
     "results": [

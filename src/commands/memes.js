@@ -19,10 +19,12 @@ module.exports = {
             await commandFile.execute(interaction, client);
         } catch (err) {
             console.error(`Erro ao executar meme ${subcommand}:`, err);
-            await interaction.reply({
-                content: '❌ Erro ao buscar meme.',
-                ephemeral: true
-            });
+            const payload = { content: '❌ Erro ao buscar meme.', flags: 64 };
+            if (interaction.replied || interaction.deferred) {
+                await interaction.followUp(payload);
+            } else {
+                await interaction.reply(payload);
+            }
         }
     },
 };
