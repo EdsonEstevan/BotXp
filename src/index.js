@@ -40,10 +40,12 @@ setupGameButtonHandler(client);
 
 // Inicializar scheduler de memes
 const { initScheduler } = require('./services/scheduler');
+const { initPokeQuizScheduler } = require('./services/pokequizScheduler');
 
 client.once('clientReady', () => {
     console.log(`Bot online como ${client.user.tag}`);
     initScheduler(client);
+    initPokeQuizScheduler(client);
 });
 
 client.on('interactionCreate', async interaction => {
@@ -66,25 +68,25 @@ client.on('interactionCreate', async interaction => {
         }
     } else if (interaction.isStringSelectMenu() || interaction.isButton()) {
         const [prefix] = interaction.customId.split(':');
-        if (prefix === 'nota') {
-            const command = client.commands.get('nota');
-            if (!command || !command.handleComponent) return;
-            try {
-                await command.handleComponent(interaction, client);
-            } catch (error) {
-                console.error(error);
-            }
+        const target = prefix === 'nota' ? 'nota' : prefix === 'mokenpo' ? 'mokenpo' : prefix === 'qualpoke' ? 'qualpokemon' : null;
+        if (!target) return;
+        const command = client.commands.get(target);
+        if (!command || !command.handleComponent) return;
+        try {
+            await command.handleComponent(interaction, client);
+        } catch (error) {
+            console.error(error);
         }
     } else if (interaction.isModalSubmit()) {
         const [prefix] = interaction.customId.split(':');
-        if (prefix === 'nota') {
-            const command = client.commands.get('nota');
-            if (!command || !command.handleModalSubmit) return;
-            try {
-                await command.handleModalSubmit(interaction, client);
-            } catch (error) {
-                console.error(error);
-            }
+        const target = prefix === 'nota' ? 'nota' : prefix === 'mokenpo' ? 'mokenpo' : prefix === 'qualpoke' ? 'qualpokemon' : null;
+        if (!target) return;
+        const command = client.commands.get(target);
+        if (!command || !command.handleModalSubmit) return;
+        try {
+            await command.handleModalSubmit(interaction, client);
+        } catch (error) {
+            console.error(error);
         }
     }
 });

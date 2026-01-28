@@ -1,0 +1,13 @@
+{
+  "name": "bot-xp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "dependencies": {
+    "jimp": "^0.22.10"
+  }
+}

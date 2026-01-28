@@ -4,13 +4,37 @@ const fs = require('fs');
 const path = require('path');
 
 const commands = [];
+const names = new Set();
 const commandsPath = path.join(__dirname, 'src', 'commands');
-const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
-for (const file of commandFiles) {
-    const command = require(`./src/commands/${file}`);
-    commands.push(command.data.toJSON());
+function loadCommandsRecursive(dir) {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+            loadCommandsRecursive(fullPath);
+        } else if (entry.name.endsWith('.js')) {
+            try {
+                const command = require(fullPath);
+                if (command?.data?.toJSON) {
+                    const name = command.data.name;
+                    if (names.has(name)) {
+                        console.warn('[deploy] Ignorando duplicado', name, 'em', fullPath);
+                        continue;
+                    }
+                    names.add(name);
+                    commands.push(command.data.toJSON());
+                } else {
+                    console.warn('[deploy] Ignorando arquivo sem data/toJSON:', fullPath);
+                }
+            } catch (err) {
+                console.error('[deploy] Erro ao carregar comando', fullPath, err?.message || err);
+            }
+        }
+    }
 }
+
+loadCommandsRecursive(commandsPath);
 
 const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
 
