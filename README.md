@@ -1,47 +1,53 @@
-# Bot de Meme para Discord (discord.js v14)
+# Bot XP — Bot multifuncional para Discord
 
-Um bot de Discord que envia memes aleatórios usando a [Meme API](https://meme-api.com/).
+Bot em português com economia, gacha, minigames, agendamento de memes, quiz de Pokémon e módulos de notas. Todos os comandos são slash commands carregados automaticamente a partir de [src/commands](src/commands).
 
 ## Requisitos
-- Node.js 18+
-- Um bot registrado no Discord (pegue o token e client_id no portal de desenvolvedores)
+- Node.js 18 ou superior
+- Aplicação de bot no Discord com as intents padrão habilitadas
+- Token do bot (`DISCORD_TOKEN`) e `CLIENT_ID` da aplicação
 
-## Instalação
-
-1. Clone o repositório e entre na pasta do projeto.
-2. Instale as dependências:
+## Configuração rápida
+1) Clone o repositório e acesse a pasta.
+2) Instale as dependências:
    ```sh
-   npm install discord.js dotenv node-fetch
+   npm install
    ```
-3. Renomeie `.env` e preencha com seu `DISCORD_TOKEN` e `CLIENT_ID` (e `GUILD_ID` se quiser registrar comandos só em uma guild).
+3) Crie um arquivo `.env` com as variáveis:
+   ```dotenv
+   DISCORD_TOKEN=seu_token_aqui
+   CLIENT_ID=seu_client_id
+   # Opcional: limite o registro dos comandos a uma guild
+   # GUILD_ID=123456789012345678
+   ```
 
-## Registro dos comandos
-
-Para registrar os comandos (necessário na primeira vez ou ao alterar comandos):
-
+### Registrar slash commands
 ```sh
-node deploy-commands.js
+npm run deploy
+```
+- Com `GUILD_ID` definido, registra apenas na guild (mais rápido para testar).
+- Sem `GUILD_ID`, registra globalmente (propaga em alguns minutos).
+
+### Rodar o bot
+```sh
+npm start
 ```
 
-## Rodando o bot
+## Principais comandos
+- Memes: `/memes br`, `/memes eng`, `/agendarmeme`, `/listaagendamentos`, `/removeragendamento`.
+- Economia: `/economia saldo|transferir|perfil|top10`, `/salario` (diário), `/efeitos` para ver buffs/debuffs.
+- Gacha e batalhas: `/gacha` (itens), `/galo` (coleção e duelos de galos), `/clash` (base e defesas).
+- Minigames: `/jogos coinflip|dadao|adivinhe|roleta|ppt|forca|roubo|termoo`.
+- Pokémon: `/qualpokemon` (palpite manual) e desafios agendados pelo PokeQuiz (usa silhueta gerada em [src/services/pokequiz.js](src/services/pokequiz.js)).
+- Outros: `/mokenpo` (mortal kombat k-pop), `/nota` (notas/recados), `/agendador` para configurar memes recorrentes.
 
-```sh
-node src/index.js
-```
+## Dados e agendamentos
+- Persistência em arquivos JSON na raiz (ex.: economy, gacha, galo, schedules, pokequiz_state). Não há banco de dados externo.
+- Agendamentos diários de memes e PokeQuiz usam [node-schedule](https://github.com/node-schedule/node-schedule) ([src/services/scheduler.js](src/services/scheduler.js) e [src/services/pokequizScheduler.js](src/services/pokequizScheduler.js)).
+- O quiz "Qual é esse Pokémon?" gera silhuetas com Jimp em [src/services/pokequiz.js](src/services/pokequiz.js) e paga moedas aos três primeiros acertos.
 
-## Uso
+## Scripts npm
+- `npm start`: inicia o bot.
+- `npm run deploy`: registra/atualiza todos os slash commands.
 
-- Use `/meme` para receber um meme aleatório.
-- Clique em "Outro meme 🔁" para trocar o meme (só quem usou o comando pode clicar, botão expira em 2 minutos).
-
-## Estrutura
-- `src/index.js`: inicialização do bot
-- `src/commands/meme.js`: comando /meme
-- `src/services/memeApi.js`: fetch e validação de memes
-- `src/components/memeButton.js`: handler e criação do botão
-- `.env`: variáveis de ambiente
-- `deploy-commands.js`: registro dos comandos
-
----
-
-Feito com ❤️ usando discord.js v14
+Feito com discord.js v14. Divirta-se!

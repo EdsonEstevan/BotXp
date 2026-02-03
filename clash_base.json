@@ -26,12 +26,12 @@
       {
         "type": "miner",
         "builtAt": 1769194442015,
-        "lastCollected": 1769781242015
+        "lastCollected": 1770119642015
       },
       {
         "type": "foundry",
         "builtAt": 1769438154041,
-        "lastCollected": 1769762154041
+        "lastCollected": 1770107754041
       }
     ],
     "created": 1769192953911

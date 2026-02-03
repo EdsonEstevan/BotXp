@@ -8,6 +8,10 @@
     "deploy": "node deploy-commands.js"
   },
   "dependencies": {
-    "jimp": "^0.22.10"
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "jimp": "^0.22.10",
+    "node-fetch": "^3.3.2",
+    "node-schedule": "^2.1.1"
   }
 }
