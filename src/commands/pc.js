@@ -10,7 +10,8 @@ const {
     TextInputStyle,
 } = require('discord.js');
 
-const DESKTOP_BG = 'https://i.imgur.com/QoG8gRr.png';
+const DESKTOP_BG = 'https://i.imgur.com/2jzC7kW.jpeg';
+const FRAME_WIDTH = 38;
 const folders = {
     'Meu PC': ['Disco C:', 'Downloads', 'Imagens', 'Projetos'],
     'Downloads': ['instalador_bot.exe', 'meme_pack.zip', 'readme.txt'],
@@ -19,16 +20,43 @@ const folders = {
     'Disco C:': ['Windows/', 'Users/', 'Arquivos de Programas/'],
 };
 
+function frame(title, bodyLines, footerLines = []) {
+    const pad = (text) => {
+        const trimmed = text ?? '';
+        return trimmed.length > FRAME_WIDTH - 4
+            ? trimmed.slice(0, FRAME_WIDTH - 4)
+            : trimmed.padEnd(FRAME_WIDTH - 4, ' ');
+    };
+    const divider = '├' + '─'.repeat(FRAME_WIDTH - 2) + '┤';
+    const lines = [
+        '┌' + '─'.repeat(FRAME_WIDTH - 2) + '┐',
+        `│ ${pad(title)} │`,
+        divider,
+        ...bodyLines.map((l) => `│ ${pad(l)} │`),
+    ];
+    if (footerLines.length) {
+        lines.push(divider, ...footerLines.map((l) => `│ ${pad(l)} │`));
+    }
+    lines.push('└' + '─'.repeat(FRAME_WIDTH - 2) + '┘');
+    return ['```', ...lines, '```'].join('\n');
+}
+
 function desktopPayload(userId) {
+    const desktopWindow = frame('Bot XP — Área de Trabalho', [
+        '🗂️  Explorer        🎮  Tetris',
+        '🧮  Calculadora     📁  Arquivos',
+        '🖥️  Voltar p/ desktop',
+        'Fundo: vaporwave (mock)',
+    ], [
+        '⊞ Iniciar | 🗂️ | 🧮 | 🎮 | 📁 | 🔈 | 🕓 12:00',
+    ]);
+
     const embed = new EmbedBuilder()
         .setColor('#0a7cff')
-        .setTitle('Workspace PC')
-        .setDescription('Clique nos “ícones” abaixo como se fosse um desktop. Tudo é seguro e só você vê (ephemeral).')
-        .setThumbnail(DESKTOP_BG)
-        .addFields(
-            { name: 'Apps', value: '🗂️ Explorer | 🧮 Calculadora | 🎮 Tetris | 📁 Arquivos' },
-            { name: 'Dica', value: 'Use os botões para abrir apps, volte com “Área de trabalho”.' }
-        );
+        .setTitle('Desktop do bot')
+        .setDescription(desktopWindow)
+        .setImage(DESKTOP_BG)
+        .setFooter({ text: 'Interface mock; todos os cliques são seguros e apenas você vê.' });
 
     return {
         embeds: [embed],
@@ -66,18 +94,21 @@ function explorerPayload(userId) {
     const embed = new EmbedBuilder()
         .setColor('#1f6feb')
         .setTitle('Explorer')
-        .setDescription('Selecione uma pasta para ver o conteúdo.')
-        .setThumbnail('https://i.imgur.com/NtUo8wC.png');
+        .setDescription(frame('Explorer', [
+            'Escolha uma pasta no menu.',
+            'Pastas rápidas na barra inferior.',
+        ], ['⌂ Meu PC | ⬇️ Downloads | 🖼️ Imagens | 🛠️ Projetos | 💽 Disco C:']));
 
     return { embeds: [embed], components: [new ActionRowBuilder().addComponents(menu), ...buildDesktopButtons(userId)] };
 }
 
 function folderEmbed(path) {
     const items = folders[path] || [];
+    const lines = items.length ? items.map(i => `• ${i}`) : ['(vazio)'];
     const embed = new EmbedBuilder()
         .setColor('#1f6feb')
         .setTitle(`Explorer — ${path}`)
-        .setDescription(items.length ? items.map(i => `• ${i}`).join('\n') : 'Vazio aqui.');
+        .setDescription(frame(`Explorer — ${path}`, lines, ['⌂ Voltar pelo menu acima']));
     return embed;
 }
 
@@ -98,22 +129,45 @@ function calcAppPayload(userId) {
     const embed = new EmbedBuilder()
         .setColor('#0ea5e9')
         .setTitle('Calculadora')
-        .setDescription('Clique em “Abrir calculadora” para digitar uma expressão. Permitido: 0-9 + - * / % e parênteses.');
+        .setDescription(frame('Calculadora', [
+            'Suporta 0-9 + - * / % ( )',
+            'Ex: (2+3)*4/5',
+            'Clique no botão para digitar.',
+        ]));
     const row = new ActionRowBuilder().addComponents(
-        new ButtonBuilder().setCustomId(`pc:calcmodal:${userId}`).setLabel('Abrir calculadora').setStyle(ButtonStyle.Primary)
+        new ButtonBuilder().setCustomId(`pc:calcmodal:${userId}`).setLabel('Abrir calculadora').setEmoji('🧮').setStyle(ButtonStyle.Primary)
     );
     return { embeds: [embed], components: [row, ...buildDesktopButtons(userId)] };
 }
 
 function tetrisPayload(userId, score = 0, lines = 0) {
+    const board = [
+        '┃ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ┃',
+        '┃ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ┃',
+        '┃ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ┃',
+        '┃ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ┃',
+        '┃ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ┃',
+        '┃ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ┃',
+        '┃ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ┃',
+        '┃ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ┃',
+        '┗━━━━━━━━━━━━━━━━━━┛',
+    ];
+
+    // Pequena “animação” textual baseada no score
+    const noise = (score + lines) % 7;
+    for (let i = 0; i < noise && i < board.length - 1; i++) {
+        board[i] = board[i].replace('▢', '▓');
+    }
+
     const embed = new EmbedBuilder()
         .setColor('#22c55e')
-        .setTitle('Tetris (mini)')
-        .setDescription('Clique em “Dropar peça” para ganhar pontos. É só um mini Easter egg visual.')
-        .addFields(
-            { name: 'Score', value: `${score}`, inline: true },
-            { name: 'Linhas', value: `${lines}`, inline: true }
-        )
+        .setTitle('Tetris (mock)')
+        .setDescription(frame('Tetris', [
+            ...board,
+            `Score: ${score}`,
+            `Linhas: ${lines}`,
+            'Clique em dropar peça para somar pontos.',
+        ], ['Setas virtuais: ← ↓ → | ⏹️']))
         .setFooter({ text: 'Sem persistência real — apenas diversão rápida.' });
 
     const row = new ActionRowBuilder().addComponents(
@@ -130,11 +184,16 @@ function filesPayload(userId) {
     const embed = new EmbedBuilder()
         .setColor('#fbbf24')
         .setTitle('Pasta de arquivos')
-        .setDescription('Mock de alguns arquivos rápidos. Use o explorer para navegar mais.');
-    embed.addFields(
-        { name: 'Recentes', value: 'resume.pdf, notas.txt, sprint-plan.md' },
-        { name: 'Fixos', value: 'todo.md, ideias.md, screenshots/' },
-    );
+        .setDescription(frame('Arquivos', [
+            'Recentes:',
+            '• resume.pdf',
+            '• notas.txt',
+            '• sprint-plan.md',
+            'Fixos:',
+            '• todo.md',
+            '• ideias.md',
+            '• screenshots/',
+        ], ['Abra Explorer para mais pastas']));
     return { embeds: [embed], components: buildDesktopButtons(userId) };
 }
 
