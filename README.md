@@ -39,7 +39,7 @@ npm start
 - Gacha e batalhas: `/gacha` (itens), `/galo` (coleção e duelos de galos), `/clash` (base e defesas).
 - Minigames: `/jogos coinflip|dadao|adivinhe|roleta|ppt|forca|roubo|termoo`.
 - Pokémon: `/qualpokemon` (palpite manual) e desafios agendados pelo PokeQuiz (usa silhueta gerada em [src/services/pokequiz.js](src/services/pokequiz.js)).
-- Outros: `/mokenpo` (mortal kombat k-pop), `/nota` (notas/recados), `/agendador` para configurar memes recorrentes.
+- Outros: `/mokenpo` (mortal kombat k-pop), `/nota` (notas/recados), `/agendador` para configurar memes recorrentes, `/pc` (desktop simulado).
 
 ## Módulos em detalhes
 
@@ -89,6 +89,7 @@ npm start
 ### Outros utilitários
 - `/efeitos`: lista buffs/debuffs ativos (usados por Clash/Galo).
 - Cooldowns de várias ações em `cooldowns.json` (salário, coleta de passivos, quizzes).
+- `/pc`: abre um desktop simulado com Explorer, mini Tetris, calculadora modal e pasta de arquivos fake. Tudo é enviado de forma ephemeral para o usuário que chamou.
 ## Dados e agendamentos
 - Persistência em arquivos JSON na raiz (ex.: economy, gacha, galo, schedules, pokequiz_state). Não há banco de dados externo.
 - Agendamentos diários de memes e PokeQuiz usam [node-schedule](https://github.com/node-schedule/node-schedule) ([src/services/scheduler.js](src/services/scheduler.js) e [src/services/pokequizScheduler.js](src/services/pokequizScheduler.js)).

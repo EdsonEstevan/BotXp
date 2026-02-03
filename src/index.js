@@ -68,7 +68,7 @@ client.on('interactionCreate', async interaction => {
         }
     } else if (interaction.isStringSelectMenu() || interaction.isButton()) {
         const [prefix] = interaction.customId.split(':');
-        const target = prefix === 'nota' ? 'nota' : prefix === 'mokenpo' ? 'mokenpo' : prefix === 'qualpoke' ? 'qualpokemon' : null;
+        const target = prefix === 'nota' ? 'nota' : prefix === 'mokenpo' ? 'mokenpo' : prefix === 'qualpoke' ? 'qualpokemon' : prefix === 'pc' ? 'pc' : null;
         if (!target) return;
         const command = client.commands.get(target);
         if (!command || !command.handleComponent) return;
@@ -79,7 +79,7 @@ client.on('interactionCreate', async interaction => {
         }
     } else if (interaction.isModalSubmit()) {
         const [prefix] = interaction.customId.split(':');
-        const target = prefix === 'nota' ? 'nota' : prefix === 'mokenpo' ? 'mokenpo' : prefix === 'qualpoke' ? 'qualpokemon' : null;
+        const target = prefix === 'nota' ? 'nota' : prefix === 'mokenpo' ? 'mokenpo' : prefix === 'qualpoke' ? 'qualpokemon' : prefix === 'pc' ? 'pc' : null;
         if (!target) return;
         const command = client.commands.get(target);
         if (!command || !command.handleModalSubmit) return;
